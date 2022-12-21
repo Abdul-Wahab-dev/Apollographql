@@ -1,0 +1,20 @@
+{
+  "name": "ecom",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "nodemon ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.0",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
