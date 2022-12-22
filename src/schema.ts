@@ -25,6 +25,13 @@ type Query {
   category(id: ID!): Category      
 }
 
+type Mutation {
+  addCategory(input:addCategoryInput): Category
+  addBook(input:addBookInput): Book
+  addReview(input:addReviewInput): Review
+}
+
+
 type Review {
     id: ID!
     date: String!
@@ -35,5 +42,27 @@ type Review {
 
 input booksFilters {
   onSale: Boolean
+}
+
+input addCategoryInput {
+  name: String
+}
+input addBookInput {
+  id: ID!
+  name: String!
+  description: String!
+  quantity: Int!
+  image: String!
+  price: Float!
+  onSale: Boolean!
+  cateId: String!
+}
+input addReviewInput {
+  id: ID!
+  date: String!
+  title: String!
+  comment: String!
+  rating: Int!
+  bookId: String!
 }
 `;

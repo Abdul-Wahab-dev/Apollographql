@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "compile": "tsc",
+    "compile": "tsc -w",
     "start": "nodemon ./dist/index.js"
   },
   "keywords": [],
