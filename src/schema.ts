@@ -29,6 +29,12 @@ type Mutation {
   addCategory(input:addCategoryInput): Category
   addBook(input:addBookInput): Book
   addReview(input:addReviewInput): Review
+  deleteCategory(id: ID!): Boolean!
+  deleteBook(id: ID!): Boolean!
+  deleteReview(id: ID!): Boolean!
+  updateCategory(id: ID!, input: UpdateCategoryInput!): Category
+  updateBook(id: ID!, input: UpdateBookInput!): Book
+  updateReview(id: ID!, input: UpdateReviewInput!): Review
 }
 
 
@@ -65,4 +71,23 @@ input addReviewInput {
   rating: Int!
   bookId: String!
 }
+input UpdateCategoryInput {
+    name: String!
+  }
+input UpdateBookInput {
+  name: String!
+  description: String!
+  quantity: Int!
+  image: String!
+  price: Float!
+  onSale: Boolean!
+  cateId: String
+}  
+input UpdateReviewInput {
+    date: String!
+    title: String!
+    comment: String!
+    rating: Int!
+    bookId: ID!
+  }
 `;
